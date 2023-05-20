@@ -120,8 +120,12 @@ public class TextAnalyzer {
 	      System.out.println("Word : Frequency");
 	      
 	      //Print out results
+		int count = 0;
 	      for (Map.Entry<String, Integer> entry : sortedEntries) {
 	      	System.out.println(entry.getKey() + ": " + entry.getValue() + " time(s)");
+		      count++;
+	      	if (count == 20) {
+	      		break;}
 	      }
 		}
 	}
