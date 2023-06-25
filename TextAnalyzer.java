@@ -1,6 +1,8 @@
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TextAnalyzer {
 
@@ -137,5 +139,29 @@ public class TextAnalyzer {
         String poemWithoutHtmlTags = removeHtmlTags(poemSection);
         String poem = removePunctuation(poemWithoutHtmlTags);
         analyzeText(poem);
+    }
+}
+public class removeHtmlTagsTest {
+
+    @Test
+    public void testRemoveHtmlTags() {
+        String input = "<p>This is a test.</p>";
+        String expectedOutput = " This is a test. ";
+        
+        String actualOutput = TextAnalyzer.removeHtmlTags(input);
+        
+        assertEquals(expectedOutput, actualOutput);
+    }
+}
+public class removePunctuationTest {
+
+    @Test
+    public void testRemovePunctuation() {
+        String input = "This!is?a:test";
+        String expectedOutput = "This is a test";
+        
+        String actualOutput = TextAnalyzer.removePunctuation(input);
+        
+        assertEquals(expectedOutput, actualOutput);
     }
 }
