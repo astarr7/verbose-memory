@@ -1,9 +1,8 @@
-package ParallelArraysConcurrency; 
+package ParallelArrayConcurrency; 
 
 import java.util.Random;
 
 public class ParallelArrayConcurrency{
-	
 	
 	
     public static void main(String[] args) {
