@@ -4,8 +4,19 @@ import java.util.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * The TextAnalyzer class provides methods to analyze and process text data.
+ */
+
 public class TextAnalyzer {
 
+	/**
+     * Retrieves the poem section from the given file.
+     *
+     * @param filename the name of the file
+     * @return the poem section as a string, or null if not found or an error occurs
+     */
+	
 	static String getPoemSection(String filename) {
 		String poemSection = null;
 		
@@ -57,6 +68,13 @@ public class TextAnalyzer {
 		}
 		return poemSection;
 	}
+
+	/**
+     * Removes HTML tags from the input string.
+     *
+     * @param input the input string containing HTML tags
+     * @return the input string with HTML tags removed, or null if the input is null
+     */
 	
 	static String removeHtmlTags(String input) {
 		String result = null;
@@ -69,6 +87,13 @@ public class TextAnalyzer {
 		
 		return result;
 	}
+
+	/**
+     * Removes punctuation marks from the input string.
+     *
+     * @param input the input string containing punctuation marks
+     * @return the input string with punctuation marks removed, or null if the input is null
+     */
 	
 	static String removePunctuation(String input) {
 		String result = null;
@@ -81,6 +106,12 @@ public class TextAnalyzer {
 		
 		return result;
 	}
+
+	/**
+     * Analyzes the input text and displays the word frequency.
+     *
+     * @param input the input text to analyze
+     */
 	
 	static void analyzeText(String input) {
 		if (input != null) {
@@ -131,6 +162,13 @@ public class TextAnalyzer {
 	      }
 		}
 	}
+
+	/**
+     * The main method reads a poem from a file, removes HTML tags and punctuation marks, and analyzes the text.
+     *
+     * @param args command-line arguments (not used)
+     * @throws IOException if an I/O error occurs
+     */
 	
 	//Main
     public static void main(String[] args) throws IOException {    	
@@ -141,6 +179,7 @@ public class TextAnalyzer {
         analyzeText(poem);
     }
 }
+
 public class removeHtmlTagsTest {
 
     @Test
