@@ -1,2 +1,2 @@
 # verbose-memory
-Projects for CTSD degree at Valencia College
+Alexandra Starr Projects for CTSD degree at Valencia College
