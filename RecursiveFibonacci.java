@@ -13,6 +13,14 @@ public class RecursiveFibonacci {
         scanner.close();
     }
 
+     /**
+     * Calculates the nth term in the Fibonacci sequence.
+     *
+     * @param n The position of the term in the sequence (1-indexed).
+     * @return The nth term in the Fibonacci sequence.
+     * @throws IllegalArgumentException If n is not a positive integer.
+     */
+
     public static int fibonacci(int n) {
         if (n <= 0) {
             throw new IllegalArgumentException("Invalid input. n must be a positive integer.");
